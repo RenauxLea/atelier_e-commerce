@@ -18,3 +18,12 @@ img {
     width: 5rem;
     height: auto;
 }
+
+#modal {
+    display: none;
+    padding: 0;
+}
+
+.d-none {
+    display: none;
+}
