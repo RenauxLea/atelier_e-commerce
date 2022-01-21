@@ -13,3 +13,8 @@ main {
 article {
     width: 30%;
 }
+
+img {
+    width: 5rem;
+    height: auto;
+}
