@@ -14,13 +14,17 @@ const printData = (data) => {
 			i +
 			" : " +
 			data.fields.Titre +
-			", Statut: " +
+			", Catégories: " +
 			data.fields.Topic +
-			" (" +
+			" Auteur(s) :" +
 			data.fields.Auteur +
-			') <img src="' +
-			data.fields.Image +
+			' <img class="imgtest" src="' +
+			data.fields.Cover[0].url +
 			'">';
+		console.log(data.fields.Cover[0].url);
+		$(".imgtest").attr("src", data.fields.Cover[0].url);
+		var img = $("<img />", { src: data.fields.Cover[0].url });
+		img.appendTo(".img");
 		writeData(message);
 	});
 };
