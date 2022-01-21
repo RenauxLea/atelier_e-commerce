@@ -28,7 +28,7 @@ const printData = (data) => {
 };
 
 const writeData = (data) => {
-    const newContent = document.createElement("div");
+    const newContent = document.createElement("article");
     newContent.innerText = data;
     document.body.appendChild(newContent);
 };
