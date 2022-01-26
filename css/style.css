@@ -12,9 +12,30 @@ main {
 
 .idCover {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 img {
     width: 5rem;
     height: auto;
+}
+
+#titleModal {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.titleModalText {
+    margin-bottom: 0;
+}
+
+.contentImg {
+    display: flex;
+    justify-content: center;
+}
+
+.contentImg img {
+    width: 50%;
 }

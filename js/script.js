@@ -32,9 +32,9 @@ const writeData = (record) => {
     newContent.innerText = record.message;
 
     //On ajoute la classe idCover à l'art
-    newContent.className = "idCover"; 
+    newContent.className = "idCover";
     //On garde en "mémoire" l'id dans un data-id pour savoir sur quelle carte on a cliquéicle
-    newContent.dataset.id = record.id; 
+    newContent.dataset.id = record.id;
 
     //On créé un élément img
     var elem = document.createElement('img');
@@ -46,19 +46,19 @@ const writeData = (record) => {
 
 //Au clic sur l'élément qui a la classe idCover
 $(document).on('click', '.idCover', function(e) {
-        //On va rechercher l'objet correspondant dans le tableau records, en se servant du data-id de l'élement sur lequel on a cliqué
-        var record = records[$(this).data('id')];
-        //On créé un élément img qui contient l'url de l'image 
-        var elem = document.createElement('img');
-        elem.setAttribute('src', record.url);
+    //On va rechercher l'objet correspondant dans le tableau records, en se servant du data-id de l'élement sur lequel on a cliqué
+    var record = records[$(this).data('id')];
+    //On créé un élément img qui contient l'url de l'image 
+    var elem = document.createElement('img');
+    elem.setAttribute('src', record.url);
 
-        //On ajoute le titre et l'image dans la modale
-        $('#modal .titleModalText').text(record.titre);
-        $('#modal .conentImg').html(elem);
+    //On ajoute le titre et l'image dans la modale
+    $('#modal .titleModalText').text(record.titre);
+    $('#modal .contentImg').html(elem);
 
-        //On ouvre la modale
-        openModal(document.getElementById('modal'));
-    });
+    //On ouvre la modale
+    openModal(document.getElementById('modal'));
+});
 
 
 //Au clic sur la croix, on ferme la modale
