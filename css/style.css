@@ -10,20 +10,11 @@ main {
     flex-wrap: wrap;
 }
 
-article {
+.idCover {
     width: 30%;
 }
 
 img {
     width: 5rem;
     height: auto;
-}
-
-#modal {
-    display: none;
-    padding: 0;
-}
-
-.d-none {
-    display: none;
 }
